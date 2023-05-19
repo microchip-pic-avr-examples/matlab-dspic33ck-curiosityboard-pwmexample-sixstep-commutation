@@ -1,6 +1,6 @@
 ![image](images/microchip.jpg) 
 
-## %repoDescritpion%
+## matlab dspic33ck curiosityboard pwmexample sixstep commutation
 
 Board Image if any.
 
