@@ -1,6 +1,6 @@
 ![image](images/microchip.jpg) 
 
-# SIX STEP COMMUTATION PWM PERIPHERAL EXAMPLE USING dsPIC33CK CURIOSITY BOARD USING MATLAB SIMULINK
+# Six Step Commutation PWM Peripheral Example Using dsPIC33CK Curiosity Board Using MATLAB SIMULINK
 
 ## 1. INTRODUCTION
 This document describes the setup requirements for configuring the dsPIC33CK PWM peripheral for the three different PWM switching schemes for the Six-step commuatation of BLDC motor.
@@ -77,7 +77,7 @@ Configuration Summary:
 ## 3. HARDWARE SETUP
 <p style='text-align: justify;'>This section describes hardware setup required for the demonstration.</p>
 
-1. The board has an onboard programmer **'PICkit™ On Board (PKoBv4)'**, which can be used for programming or debugging the dsPIC33CK256MP508. To use an on-board programmer, connect a micro-USB cable between Host PC and Micro USB **connector J17** provided on the dsPIC33CK Curiosity Development Board. </p>
+1. The board has an onboard programmer **'PICkit™ On Board (PKoBv4)'**, which can be used for programming or debugging the dsPIC33CK256MP508. To use an on-board programmer, connect a micro-USB cable between Host PC and Micro USB **connector J7** provided on the dsPIC33CK Curiosity Development Board. </p>
 
     <p align="left" >
     <img  src="images/har1.png"></p> 
@@ -149,6 +149,7 @@ Configuration Summary:
     </p>
 
 ##  5. ADDING C CODE FILE TO THE SIMULINK MODEL:
+The dsPIC33CK PWM peripheral block will be having only basic configurations. In order to configure the other PWM peripheral configurations a C code file needs to used. This C code needs to be added to the Simulink model. Follow the steps below to add a C file into the Simulink model.
 
 1. In the **Modelling** tab, click on the **Model Settings**.
 
