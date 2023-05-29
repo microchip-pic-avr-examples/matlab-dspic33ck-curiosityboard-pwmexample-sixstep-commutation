@@ -149,7 +149,7 @@ Configuration Summary:
     </p>
 
 ##  5. ADDING C CODE FILE TO THE SIMULINK MODEL:
-The dsPIC33CK PWM peripheral block will be having only basic configurations. In order to configure the other PWM peripheral configurations a C code file needs to used. This C code needs to be added to the Simulink model. Follow the steps below to add a C file into the Simulink model.
+The dsPIC33CK PWM peripheral block will be having only basic configurations. In order to configure the other PWM peripheral configurations a C code file is used. This C code needs to be added to the Simulink model. Follow the steps below to add a C file into the Simulink model.
 
 1. In the **Modelling** tab, click on the **Model Settings**.
 
