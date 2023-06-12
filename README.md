@@ -12,7 +12,7 @@ In this PWM scheme, only two switches are active at any given time. Of the two a
   <p align="left" >
   <img  src="images/pwm1.png"></p>
 
-Since only one switch needs to be driven at a time on a given phase, independent PWM Output mode is used. The output override feature is used to turn off the other switches. A three-phase scheme is implemented using PWM Generator 1 (PG1) configured as  and the other two PWM Generators
+Since only one switch needs to be driven at a time on a given phase, independent PWM Output mode is used. The output override feature is used to turn off the other switches. A three-phase scheme is implemented using PWM Generator 1 (PG1) configured as Host and the other two PWM Generators
 (PG2 and PG3) configured as Client. PG1 is self-triggered, whereas PG2 and PG3 are triggered from PG1’s Start-of-Cycle (SOC). Enabling PG1 will start the system in a synchronized fashion.
 
 Configuration Summary:
