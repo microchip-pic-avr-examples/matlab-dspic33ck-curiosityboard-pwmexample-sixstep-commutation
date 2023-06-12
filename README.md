@@ -1,18 +1,19 @@
 ![image](images/microchip.jpg) 
 
-# Six Step Commutation PWM Peripheral Example Using dsPIC33CK Curiosity Board Using MATLAB SIMULINK
+# PWM Peripheral Example: 
+# Six-Step Commutation PWM Switching Schemes for BLDC Motor using dsPIC33CK Curiosity Board and MATLAB SIMULINK
 
 ## 1. INTRODUCTION
-This document describes the setup requirements for configuring the dsPIC33CK PWM peripheral for the three different PWM switching schemes for the Six-step commuatation of BLDC motor.
+This document describes implementation of three popular PWM switching schemes used for the Six-step commutation of BLDC motor. The examples are implemented on the dsPIC33CK curiosity development board and demonstrates the Override and Swap features of the High Resolution PWM module in the dsPIC33CK Digital Signal Controllers.
 
 ### 1.1 PWM Switching Scheme 1 
-In this PWM scheme, only 2 switches are active at any given time. Of the two active phases, one highside and one low-side switch is controlled with its phase’s corresponding PWM waveform, as shown below.
+In this PWM scheme, only two switches are active at any given time. Of the two active phases, one high side and one low side switch is controlled with its phase’s corresponding PWM waveform, as shown below.
 
   <p align="left" >
   <img  src="images/pwm1.png"></p>
 
-Since only one switch needs to be driven at a time on a given phase,independent PWM Output mode is used. The output override feature is then used to suppress the unused output. A three-phase scheme is implemented using PWM Generator 1 (PG1) configured as master and the other two PWM Generators
-(PG2 and PG3) configured as Slaves. PG1 is self-triggered, whereas PG2 and PG3 are triggered from PG1’s Start-of-Cycle (SOC). Enabling PG1 will start the system in a synchronized fashion.
+Since only one switch needs to be driven at a time on a given phase, independent PWM Output mode is used. The output override feature is used to turn off the other switches. A three-phase scheme is implemented using PWM Generator 1 (PG1) configured as Host and the other two PWM Generators
+(PG2 and PG3) configured as Client. PG1 is self-triggered, whereas PG2 and PG3 are triggered from PG1’s Start-of-Cycle (SOC). Enabling PG1 will start the system in a synchronized fashion.
 
 Configuration Summary:
 - Independent Edge PWM mode
@@ -21,12 +22,12 @@ Configuration Summary:
 - Override State is drive low
 
 ### 1.2 PWM Switching Scheme 2
-In this PWM scheme, three switches are used to control the two active phases. In a given sector, one active phase is driven with a complementary PWM waveform and the other active phase has only its low side driven low at 100% duty cycle, as shown in figure below. Like Scheme 1, overrides are used to control the outputs in each sector.
+In this PWM scheme, three switches are used to control the two active phases. In a given sector, one active phase is driven with a complementary PWM waveform and the other active phase has only its low side driven high at 100% duty cycle, as shown in figure below. Like Scheme 1, overrides are used to control the outputs in each sector.
 
   <p align="left" >
   <img  src="images/pwm2.png"></p>
 
-In this scheme, Complementary Output mode is used and overridden as needed in each sector. The same three-phase Master/Slave synchronization technique is used as in Scheme 1. 
+In this scheme, Complementary Output mode is used and overridden as needed in each sector. The same three-phase Host-Client synchronization technique is used as in Scheme 1. 
 
 Configuration Summary:
 - Independent Edge PWM mode
@@ -36,7 +37,7 @@ Configuration Summary:
 - Dead time is applied to the Complementary PWM Signal
 
 ### 1.3 PWM Switching Scheme 3
-In this PWM scheme, four switches are driven in a given sector. Two pairs of complementary PWM outputs are applied to the two active phases. The inactive phase is overriden low as needed, as shown below.
+In this PWM scheme, four switches are driven in a given sector. Two pairs of complementary PWM outputs are applied to the two active phases. The inactive phase is overriden to low as needed, as shown below.
 
   <p align="left" >
   <img  src="images/pwm3.png"></p>
@@ -82,7 +83,7 @@ Configuration Summary:
     <p align="left" >
     <img  src="images/har1.png"></p> 
 
-2. Make sure that the **Jumper J11** is on the **+5V USB Power** side. So that the dsPIC33CK Curiosity Development Board is power from Host PC through the USB cable. </p> 
+2. Make sure that the **Jumper J11** is on the **+5V USB Power** side. So that the dsPIC33CK Curiosity Development Board is powered from Host PC through the USB cable. </p> 
 
     <p align="left" >
     <img  src="images/har2.png"></p>
@@ -148,8 +149,8 @@ Configuration Summary:
       <img  src="images/dem11.png"></p>
     </p>
 
-##  5. ADDING C CODE FILE TO THE SIMULINK MODEL:
-The dsPIC33CK PWM peripheral block will be having only basic configurations. In order to configure the other PWM peripheral configurations a C code file is used. This C code needs to be added to the Simulink model. Follow the steps below to add a C file into the Simulink model.
+##  5. ADDING C SOURCE FILE TO THE SIMULINK MODEL:
+The model incorporates a C source file, which has configurations required for the different PWM switching schemes through override, swap and output mode features of the High Resolution PWM. Follow the steps below to add a C source file into the Simulink model.
 
 1. In the **Modelling** tab, click on the **Model Settings**.
 
@@ -163,13 +164,13 @@ The dsPIC33CK PWM peripheral block will be having only basic configurations. In 
       <img  src="images/code2.png"></p>
     </p>
 
-3.	In the **Include directories** add the path in which C code files is present (if the C code is in the same directory as the Simulink file, then give **“./” **)
+3.	In the **Include directories**, add the path of the C source file. If the C source file is in the same directory as the Simulink model, then give **“./”**.
 
     <p align="left">
       <img  src="images/code3.png"></p>
     </p>
 
-4.	In the **Source files tab**, enter the C code file name which needs to be included. Then click on **Apply**.
+4.	In the **Source files tab**, enter the C source file name which needs to be included. Then click **Apply**.
 
     <p align="left">
       <img  src="images/code4.png"></p>
