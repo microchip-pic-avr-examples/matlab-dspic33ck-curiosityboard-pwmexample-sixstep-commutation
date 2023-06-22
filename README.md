@@ -123,31 +123,26 @@ Configuration Summary:
       <img  src="images/dem6.png"></p>
     </p>
 
-7.	<p style='text-align: justify;'>If the device is successfully programmed, <b>LED1 and LED2</b> will be blinking.
+7.	<p style='text-align: justify;'>If the device is successfully programmed, <b>LED1 and LED2</b> will be blinking. All the PWM's will be turned off.
 
-8.	<p style='text-align: justify;'> The PWM Swithing Scheme 1 will be available in PWM pins and RED LED Will be glowing.
+8.	<p style='text-align: justify;'> Press the push button to <b>SW1</b> go to PWM Swithing Scheme 1 and RED LED Will be glowing. Press the push button SW1 for the second time to turn off the PWM Switching Scheme 1.
 
     <p align="left">
       <img  src="images/dem8.png"></p> 
     </p>
 
-9.	Press the push button <b>SW1</b> to change to PWM Scheme 2 and GREEN LED will glow.
+9.	Press the push button <b>SW1</b> for the third time to change to PWM Scheme 2 and GREEN LED will glow. Press the push button SW1 for the fourth time to turn off the PWM Switching Scheme 1.
 
     <p align="left">
       <img  src="images/dem9.png"></p>
     </p>
 
-10.	Press the push button again <b>SW1</b> to change to PWM Scheme 3 and BLUE LED will glow.
+10.	Press the push button <b>SW1</b> for the fifth time to change to PWM Scheme 3 and BLUE LED will glow.
 
     <p align="left">
       <img  src="images/dem10.png"></p>
     </p>
 
-11.	The PWM duty cycle can be varied using the potentiometer.
-
-    <p align="left">
-      <img  src="images/dem11.png"></p>
-    </p>
 
 ##  5. ADDING C SOURCE FILE TO THE SIMULINK MODEL:
 The model incorporates a C source file, which has configurations required for the different PWM switching schemes through override, swap and output mode features of the High Resolution PWM. Follow the steps below to add a C source file into the Simulink model.
