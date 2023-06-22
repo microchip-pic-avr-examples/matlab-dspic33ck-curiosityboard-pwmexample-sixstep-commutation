@@ -56,7 +56,7 @@ Configuration Summary:
 -  MATLAB model can be cloned or downloaded as zip file from the Github repository ([link](https://github.com/microchip-pic-avr-solutions/matlab-dspic33ck-curiosityboard-pwmexample-sixstep-commutation)).
 
 ### 2.2	Software Tools Used for Testing the MATLAB/Simulink Model
-1.	MPLAB X IDE and IPE (v6.05)
+1.	MPLAB X IDE and IPE (v6.00)
 2.	XC16 compiler (v2.00)
 3.	MATLAB R2023a
 4.	Required MATLAB add-on packages
@@ -78,12 +78,12 @@ Configuration Summary:
 ## 3. HARDWARE SETUP
 <p style='text-align: justify;'>This section describes hardware setup required for the demonstration.</p>
 
-1. The board has an onboard programmer **'PICkit™ On Board (PKoBv4)'**, which can be used for programming or debugging the dsPIC33CK256MP508. To use an on-board programmer, connect a micro-USB cable between Host PC and Micro USB **connector J7** provided on the dsPIC33CK Curiosity Development Board. </p>
+1. The board has an onboard programmer **'PICkit™ On Board (PKoBv4)'**, which can be used for programming or debugging the dsPIC33CK256MP508. To use the on-board programmer, connect a micro-USB cable between Host PC and Micro USB **connector J7** provided on the dsPIC33CK Curiosity Development Board. </p>
 
     <p align="left" >
     <img  src="images/har1.png"></p> 
 
-2. Make sure that the **Jumper J11** is on the **+5V USB Power** side. So that the dsPIC33CK Curiosity Development Board is powered from Host PC through the USB cable. </p> 
+2. Make sure that the **Jumper J11** is on the **+5V USB Power** side to power the dsPIC33CK Curiosity Development Board from Host PC through the USB cable. </p> 
 
     <p align="left" >
     <img  src="images/har2.png"></p>
@@ -91,7 +91,7 @@ Configuration Summary:
 3. Connect the PWM pins RB10, RB11, RB12, RB13, RB14 and RB15 to the oscilloscope to monitor the PWM signals. </p>
 
 ## 4.	BASIC DEMONSTRATION
-<p style='text-align: justify;'> Follow the below instructions step-by-step, to set up and run the motor control demo application:</p>
+<p style='text-align: justify;'> Follow the instructions step-by-step, to set up and run the demo example:</p>
 
 1. Launch MATLAB (refer the section [“2.2 Sofware Tools Used for Testing the MATLAB/Simulink Model"](#22-software-tools-used-for-testing-the-matlabsimulink-model)).</p> 
 2. Open the folder downloaded from the repository, in which MATLAB files are saved (refer the section ["2.1 MATLAB Model Required for the Demonstration"](#21-matlab-model-required-for-the-demonstration)).
@@ -105,7 +105,7 @@ Configuration Summary:
       <img  src="images/dem3.png"></p>
     </p>
     
-4.	<p style='text-align: justify;'>From this Simulink model an MPLAB X project can be generated, and it can be used to program the dsPIC. <p style='text-align: justify;'>To generate the code from the Simulink model, go to the <b>"MICROCHIP"</b> tab, and enable the tabs shown in the figure below. 
+4.	<p style='text-align: justify;'>From this Simulink model an MPLAB X project can be generated. To generate the code from the Simulink model, go to the <b>"MICROCHIP"</b> tab, and enable the tabs shown in the figure below. 
 
     <p align="left">
       <img  src="images/dem4.png"></p>
@@ -123,21 +123,21 @@ Configuration Summary:
       <img  src="images/dem6.png"></p>
     </p>
 
-7.	<p style='text-align: justify;'>If the device is successfully programmed, <b>LED1 and LED2</b> will be blinking. All the PWM's will be turned off.
+7.	<p style='text-align: justify;'>If the device is successfully programmed, <b>LED1 and LED2</b> will be blinking. 
 
-8.	<p style='text-align: justify;'> Press the push button to <b>SW1</b> go to PWM Swithing Scheme 1 and RED LED Will be glowing. Press the push button SW1 for the second time to turn off the PWM Switching Scheme 1.
+8.	<p style='text-align: justify;'> Press the push button <b>SW1</b> to enable 'PWM Swithing Scheme 1' and 'RED LED' is turned ON to indicate it. Press the push button SW1 again to disable the PWMs.
 
     <p align="left">
       <img  src="images/dem8.png"></p> 
     </p>
 
-9.	Press the push button <b>SW1</b> for the third time to change to PWM Scheme 2 and GREEN LED will glow. Press the push button SW1 for the fourth time to turn off the PWM Switching Scheme 1.
+9.	<p style='text-align: justify;'> Press the push button <b>SW1</b> to enable 'PWM Swithing Scheme 2' and 'GREEN LED' is turned ON to indicate it. Press the push button SW1 again to disable the PWMs.
 
     <p align="left">
       <img  src="images/dem9.png"></p>
     </p>
 
-10.	Press the push button <b>SW1</b> for the fifth time to change to PWM Scheme 3 and BLUE LED will glow.
+10.	<p style='text-align: justify;'> Press the push button <b>SW1</b> to enable 'PWM Swithing Scheme 3' and 'BLUE LED' is turned ON to indicate it. Press the push button SW1 again to disable the PWMs.
 
     <p align="left">
       <img  src="images/dem10.png"></p>
@@ -145,7 +145,7 @@ Configuration Summary:
 
 
 ##  5. ADDING C SOURCE FILE TO THE SIMULINK MODEL:
-The model incorporates a C source file, which has configurations required for the different PWM switching schemes through override, swap and output mode features of the High Resolution PWM. Follow the steps below to add a C source file into the Simulink model.
+The model incorporates a C source file, which has configurations required to implement various PWM switching schemes through override, swap and output mode features of the High Resolution PWM. Follow the steps below to add a C source file into the Simulink model.
 
 1. In the **Modelling** tab, click on the **Model Settings**.
 
