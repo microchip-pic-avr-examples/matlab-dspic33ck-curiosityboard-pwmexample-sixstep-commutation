@@ -58,7 +58,7 @@ void PWM_Scheme_Select(unsigned int switch_case)
                 APP_UpdatePWMConfig_Scheme3();
                 schemePWM = 2;
             break;
-    }
+        }
 }
 
 void APP_UpdatePWMConfig_Scheme1(void)
