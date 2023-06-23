@@ -53,7 +53,7 @@ Configuration Summary:
 
 ## 2.	SUGGESTED DEMONSTRATION REQUIREMENTS
 ### 2.1 MATLAB Model Required for the Demonstration
--  MATLAB model can be cloned or downloaded as zip file from the Github repository ([link](https://github.com/microchip-pic-avr-solutions/matlab-dspic33ck-curiosityboard-pwmexample-sixstep-commutation)).
+-  MATLAB model can be cloned or downloaded as zip file from the Github repository ([link](https://github.com/microchip-pic-avr-examples/matlab-dspic33ck-curiosityboard-pwmexample-sixstep-commutation)).
 
 ### 2.2	Software Tools Used for Testing the MATLAB/Simulink Model
 1.	MPLAB X IDE and IPE (v6.00)
@@ -179,5 +179,4 @@ For more information, refer to the following documents or links.
 3. [dsPIC33CK Curiosity Development Board User’s Guide](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU16/ProductDocuments/UserGuides/dsPIC33CK-Curiosity-Development-Board-User%27s-Guide-DS50002859A.pdf)
 3.	[MPLAB® X IDE installation](https://microchipdeveloper.com/mplabx:installation)
 4.	[MPLAB® XC16 Compiler installation](https://microchipdeveloper.com/mplabx:installation)
-5.  [Motor Control Blockset](https://in.mathworks.com/help/mcb/)
-6.  [MPLAB Device Blocks for Simulink :dsPIC, PIC32 and SAM mcu](https://in.mathworks.com/matlabcentral/fileexchange/71892-mplab-device-blocks-for-simulink-dspic-pic32-and-sam-mcu)
+5.  [MPLAB Device Blocks for Simulink :dsPIC, PIC32 and SAM mcu](https://in.mathworks.com/matlabcentral/fileexchange/71892-mplab-device-blocks-for-simulink-dspic-pic32-and-sam-mcu)
