@@ -4,7 +4,7 @@
    "content":{
       "metaDataVersion":"1.0.0",
       "name":"com.microchip.matlab.project.matlab-dspic33ck-curiosityboard-pwmexample-sixstep-commutation",
-      "version":"1.0.0",
+      "version":"1.0.1",
       "displayName":"MATLAB Simulink dsPIC33CK PWM Peripheral Example for Six Step Commutation for BLDC Motor",
       "projectName":"matlab-dspic33ck-curiosityboard-pwmexample-sixstep-commutation",
       "shortDescription":"PWM Peripheral Example for Six Step Commutation for BLDC Motor Using dsPIC33CK Curiosity Board on MATLAB and Simulink",
