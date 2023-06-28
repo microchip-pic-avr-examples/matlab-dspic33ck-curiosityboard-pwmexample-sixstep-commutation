@@ -21,6 +21,9 @@ Configuration Summary:
 - Master Period and Duty Cycle Used
 - Override State is drive low
 
+  <p align="left" >
+  <img  src="images/scheme1.PNG"></p>
+
 ### 1.2 PWM Switching Scheme 2
 In this PWM scheme, three switches are used to control the two active phases. In a given sector, one active phase is driven with a complementary PWM waveform and the other active phase has only its low side driven high at 100% duty cycle, as shown in figure below. Like Scheme 1, overrides are used to control the outputs in each sector.
 
@@ -36,6 +39,9 @@ Configuration Summary:
 - Override State is Dependent on Sector State
 - Dead time is applied to the Complementary PWM Signal
 
+  <p align="left" >
+  <img  src="images/scheme2.PNG"></p>
+
 ### 1.3 PWM Switching Scheme 3
 In this PWM scheme, four switches are driven in a given sector. Two pairs of complementary PWM outputs are applied to the two active phases. The inactive phase is overriden to low as needed, as shown below.
 
@@ -50,6 +56,8 @@ Configuration Summary:
 - Master Period and Duty Cycle Used
 - Override State is Dependent on Sector State
 - Dead time is applied to the Complementary PWM Signal
+  <p align="left" >
+  <img  src="images/scheme3.PNG"></p>
 
 ## 2.	SUGGESTED DEMONSTRATION REQUIREMENTS
 ### 2.1 MATLAB Model Required for the Demonstration
@@ -177,6 +185,6 @@ For more information, refer to the following documents or links.
 1. [dsPIC33CK256MP508 Family Datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/dsPIC33CK256MP508-Family-Data-Sheet-DS70005349H.pdf)
 2. [dsPIC33/PIC24 High-Resolution PWM with Fine Edge Placement Family Reference Manual](http://ww1.microchip.com/downloads/en/DeviceDoc/dsPIC33-PIC24-FRM-High-Resolution-PWM-with-Fine-Edge-Placement-70005320b.pdf)
 3. [dsPIC33CK Curiosity Development Board User’s Guide](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU16/ProductDocuments/UserGuides/dsPIC33CK-Curiosity-Development-Board-User%27s-Guide-DS50002859A.pdf)
-3.	[MPLAB® X IDE installation](https://microchipdeveloper.com/mplabx:installation)
-4.	[MPLAB® XC16 Compiler installation](https://microchipdeveloper.com/mplabx:installation)
-5.  [MPLAB Device Blocks for Simulink :dsPIC, PIC32 and SAM mcu](https://in.mathworks.com/matlabcentral/fileexchange/71892-mplab-device-blocks-for-simulink-dspic-pic32-and-sam-mcu)
+4.	[MPLAB® X IDE installation](https://microchipdeveloper.com/mplabx:installation)
+5.	[MPLAB® XC16 Compiler installation](https://microchipdeveloper.com/xc16:installation)
+6.  [MPLAB Device Blocks for Simulink :dsPIC, PIC32 and SAM mcu](https://in.mathworks.com/matlabcentral/fileexchange/71892-mplab-device-blocks-for-simulink-dspic-pic32-and-sam-mcu)
